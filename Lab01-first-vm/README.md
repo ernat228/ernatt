@@ -1,24 +1,10 @@
-﻿# Lab 0 - Inventory
+﻿# Lab 1 - First Virtual Machine
 
-|What|Value|Where I got it|
-|-|-|-|
-|CPU model|13th Gen Intel(R) Core(TM) i5-13420H|Get-CimInstance Win32\_Processor|
-|Cores / threads|8 / 12|Get-CimInstance Win32\_Processor|
-|RAM total|16 GB|Get-CimInstance Win32\_PhysicalMemory (sum of Capacity)|
-|RAM modules / speed|1 1 module(s), 3200 MHz|Get-CimInstance Win32\_PhysicalMemory|
-|Disk model / type|KINGSTON OM8PGP4512Q-AA, SSD, NVMe|Get-PhysicalDisk|
-|Free space on VM volume (C:)|90.6 GB|Get-Volume -DriveLetter C|
-|Firmware type / version / date|Uefi (Get-ComputerInfo BiosFirmwareType), V1.30, 06/13/2025 05:00:00|Get-CimInstance Win32\_BIOS, Confirm-SecureBootUEFI|
-|Hardware virtualization enabled|False|Get-CimInstance Win32\_Processor (VirtualizationFirmwareEnabled)|
+## Resource justification
+My host machine (Acer Nitro V15) has an Intel Core i5-13420H with 12 threads, 16 GB of RAM, and 90.6 GB of free disk space. For the Ubuntu Server VM, I allocated 2 vCPUs, which leaves 10 threads for the host OS and next week's Windows VM. I allocated 2 GB of RAM, which is more than enough for a console-only Linux guest, safely leaving 14 GB for the host and the future Windows VM. For storage, I assigned a 15 GB disk. Subtracting this from my 90.6 GB of free space leaves 75.6 GB, which is enough to accommodate next week's Windows guest installation.
 
-## Virtualization
-
-VirtualizationFirmwareEnabled = False, but Win32_ComputerSystem.HypervisorPresent = True, so virtualization is enabled and used by Windows (read via Get-CimInstance Win32\_Processor).
+## What you broke and how you confirmed it
+I chose Option A. I deleted the hostname file using the command `sudo rm /etc/hostname` and rebooted the VM. I confirmed it was broken by running `cat /etc/hostname`, which returned "No such file or directory".
 
 ## What did not work
-
-My first attempt failed: I mistyped a command (vmkdir) and ran it from C:\\Windows\\System32, so the evidence folder was not created. A try/catch with Out-File in one line also gave a parser error. I fixed the commands and re-ran everything from my Documents folder.
-The graphical About screen was not used.
-
-
-
+Initially, running the SSH command in PowerShell saved an empty 0-byte file because the connection was interrupted. I fixed this by ensuring the guest VM was running in a healthy state before executing the SSH command over port 22.

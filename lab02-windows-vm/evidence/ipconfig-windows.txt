@@ -1,0 +1,22 @@
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : lab02-win11
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Ethernet0:
+
+   Connection-specific DNS Suffix  . : localdomain
+   Description . . . . . . . . . . . : Intel(R) 82574L Gigabit Network Connection
+   Physical Address. . . . . . . . . : 00-0C-29-CD-E6-01
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::d9f2:5f8e:63b4:8a1c%4(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 192.168.44.130(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.44.2
+   DHCP Server . . . . . . . . . . . : 192.168.44.254
+   DNS Servers . . . . . . . . . . . : 192.168.44.2
+   NetBIOS over Tcpip. . . . . . . . : Enabled

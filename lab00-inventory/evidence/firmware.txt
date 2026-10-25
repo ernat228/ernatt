@@ -1,0 +1,9 @@
+﻿
+
+Manufacturer      : INSYDE Corp.
+SMBIOSBIOSVersion : V1.30
+ReleaseDate       : 6/13/2025 5:00:00 AM
+
+
+
+Not UEFI or unsupported: Не удалось задать подходящие привилегии. В доступе отказано.

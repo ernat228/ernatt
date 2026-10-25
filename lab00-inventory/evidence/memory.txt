@@ -1,0 +1,6 @@
+﻿
+BankLabel    Capacity Speed ConfiguredClockSpeed Manufacturer     
+---------    -------- ----- -------------------- ------------     
+BANK 0    17179869184  3200                 3200 A-DATA Technology
+
+

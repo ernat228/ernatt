@@ -1,0 +1,13 @@
+﻿
+FriendlyName            MediaType BusType         Size
+------------            --------- -------         ----
+KINGSTON OM8PGP4512Q-AA SSD       NVMe    512110190592
+
+
+
+DriveLetter FileSystemLabel         Size SizeRemaining
+----------- ---------------         ---- -------------
+                               898625536     120422400
+C                           510982615040   98318557184
+
+

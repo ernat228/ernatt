@@ -1,0 +1,40 @@
+=== lscpu ===
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Address sizes:                   45 bits physical, 48 bits virtual
+Byte Order:                      Little Endian
+CPU(s):                          2
+On-line CPU(s) list:             0,1
+Vendor ID:                       GenuineIntel
+Model name:                      13th Gen Intel(R) Core(TM) i5-13420H
+CPU family:                      6
+Model:                           186
+Thread(s) per core:              1
+Core(s) per socket:              1
+Socket(s):                       2
+Stepping:                        2
+BogoMIPS:                        5222.40
+
+=== free -h ===
+               total        used        free      shared  buff/cache   available
+Mem:           1.6Gi       465Mi       870Mi       1.2Mi       400Mi       1.1Gi
+Swap:             0B          0B          0B
+
+=== lsblk ===
+NAME   MODEL     SIZE ROTA TRAN
+sda    15G         1  spi
+sr0    2.7G        1  sata
+
+=== dmidecode -t baseboard ===
+Handle 0x0002, DMI type 2, 15 bytes
+Base Board Information
+	Manufacturer: Intel Corporation
+	Product Name: 440BX Desktop Reference Platform
+	Version: None
+	Serial Number: None
+	Asset Tag: Not Specified
+	Features: None
+	Location In Chassis: Not Specified
+	Chassis Handle: 0x0000
+	Type: Unknown
+	Contained Object Handles: 0
